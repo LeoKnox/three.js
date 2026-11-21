@@ -4,7 +4,7 @@ var coins = 5
 var player = "main"
 
 func _ready() -> void:
-	print("****")
+	pass
 
 func _process(delta: float) -> void:
-	pass
+	rotate_y(0.1)
