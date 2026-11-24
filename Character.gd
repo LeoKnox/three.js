@@ -30,4 +30,4 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 	# Make camera controller match position of character
-	$Camera_Controller.position = position
+	$Camera_Controller.position = lerp($Camera_Controller.position,position,.01)
