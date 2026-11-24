@@ -11,7 +11,9 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("my_action"):
+	if Input.is_action_pressed() == KEY_T:
+		print("T was pressed")
+	if Input.is_action_pressed("a"):
 		print("Pressed")
 	check_input()
 
