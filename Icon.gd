@@ -11,8 +11,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Input.is_action_pressed() == KEY_T:
-		print("T was pressed")
+	
 	if Input.is_action_pressed("a"):
 		print("Pressed")
 	check_input()
@@ -25,3 +24,5 @@ func check_input():
 		rotate_y(deg_to_rad(-SPEED))
 	elif Input.is_action_pressed("ui_right"):
 		rotate_y(deg_to_rad(SPEED))
+func _input(event):	if event is InputEventKey and not event.is_echo() and event.is_pressed() and event.keycode == KEY_W:
+	print("W")
