@@ -6,9 +6,9 @@ const JUMP_VELOCITY = 4.5
 
 
 func _physics_process(delta: float) -> void:
-	if (Input.is_key_pressed(KEY_L)):
+	if (Input.is_key_pressed(KEY_A)):
 		print("l-ed")
-		translate(Vector3(1.0,1.0,1.0))
+		rotate_x(3)
 	
 	# Add the gravity.
 	if not is_on_floor():
