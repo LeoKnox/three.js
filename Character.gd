@@ -11,7 +11,7 @@ func _physics_process(delta: float) -> void:
 	if (Input.is_key_pressed(KEY_D)):
 		rotate_y(deg_to_rad(-5))
 	if (Input.is_key_pressed(KEY_W)):
-		position.x += 1
+		position.z += .1
 	
 	# Add the gravity.
 	if not is_on_floor():
