@@ -7,7 +7,7 @@ const JUMP_VELOCITY = 4.5
 
 func _physics_process(delta: float) -> void:
 	if (Input.is_key_pressed(KEY_A)):
-		rotate_object_local(Vector3(1,0,0),PI)
+		position=transform.basis.z.normalized()*SPEED*delta
 	if (Input.is_key_pressed(KEY_D)):
 		rotate_y(deg_to_rad(-5))
 	if (Input.is_key_pressed(KEY_W)):
